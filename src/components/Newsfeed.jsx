@@ -10,7 +10,7 @@ const Newsfeed = () => {
       method: 'GET',
       url: 'https://crypto-news16.p.rapidapi.com/news/top/7',
       headers: {
-        'X-RapidAPI-Key': "2714acb3ecmshb0929b8c7a84381p1c3ab8jsnd5eb05a8c690",
+        'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
         'X-RapidAPI-Host': 'crypto-news16.p.rapidapi.com'
       }
     };
