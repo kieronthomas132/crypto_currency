@@ -1,38 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap");
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  display: flex;
   min-height: 100vh;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.47' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  font-family: "Outfit", sans-serif;
+}
+
+.currency-converter {
+  background-color: #171718;
+  background-image: linear-gradient(135deg, #171718 0%, #2e2e31 100%);
+  padding: 2rem;
+  margin-right: 1rem;
+  min-height: 60vh;
+  width: 50%;
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.currency-converter h2:hover {
+  cursor: default;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.primary-currency {
+  margin: 1rem;
+}
+
+.primary-currency input {
+  padding: 0.5rem;
+  margin: 0.4rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.second-amount {
+  opacity: 0.4;
+}
+
+.currency-options {
+  padding: 0.5rem;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+}
+
+.currency-options:hover {
+  cursor: pointer;
+}
+
+.convert {
+  margin-left: 100px;
+  margin-top: 20px;
+  background: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.convert:hover {
+  scale: 1.2;
+  cursor: pointer;
+}
+
+.exchange-rate {
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  margin-top: 2rem;
+  min-width: 50vw;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.news-feed {
+  background-color: #171718;
+  background-image: linear-gradient(135deg, #171718 0%, #2e2e31 100%);
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  min-height: 82vh;
+  font-size: 14px;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.news-feed h2:hover {
+  cursor: default;
+}
+
+.news-feed a {
+  text-decoration: underline;
+  color: white;
+  line-height: 20px;
+}
+
+
+@media screen and (max-width:600px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    padding-top:3rem ;
   }
-  to {
-    transform: rotate(360deg);
+
+  .currency-converter {
+    min-width: 400px;
   }
+
+  .news-feed {
+    margin: 2rem;
+    min-width: 500px;
+    font-size: 1rem;
+  }
+  
+}
+
+@media screen and (max-width:534px) {
+
+  .currency-converter {
+    min-width: 300px;
+    font-size: 0.8rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .news-feed {
+    min-width: 300px;
+    min-height: 400px;
+  }
+  
 }
