@@ -114,6 +114,10 @@
   line-height: 20px;
 }
 
+.news-feed a {
+  cursor: pointer;
+}
+
 
 @media screen and (max-width:600px) {
   .App {
